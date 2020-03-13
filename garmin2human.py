@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/local/bin python
 # coding: utf-8
 
 #imports
@@ -48,8 +48,8 @@ def getDataframe(eventlist, wishlist):
                     new_row[counter]=float(event.readings[element].value)*(180/(2**31))
                 else:
                     new_row[counter]=float(event.readings[element].value)
-                output_list.append(new_row)
                 counter = counter+1
+            output_list.append(new_row)
         except: 
             ''
     wishlist.insert(0,'timestamp')
